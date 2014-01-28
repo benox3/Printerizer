@@ -12,6 +12,8 @@
 
 PrinterizerWiz.prototype = {
 
+
+
     checkbox: function (descriptiontext, checked, optional) {
 
 

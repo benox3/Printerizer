@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="viewport" content="width=device-width, maximum-scale=1">
@@ -13,9 +12,34 @@
     <title>Printerizer Wiz</title>
 </head>
 <body>
-
+    <form>
+    <div class="container" style="width:500px;">
+        <select id="selector" class="form-control">
+            <option value="">Select a form element</option>
+            <option>TextBox</option>
+            <option>CheckBox</option>
+        </select>
+        <div id="createCheckBox">
+            <div class="form-group">
+                <label id="cbDescriptionText">
+                    Label Text</label><input class="form-control" type="text" />
+            </div>
+            <div class="checkbox">
+                <label id="Label1">
+                    <input type="checkbox" />
+                    Should checkbox be checked on default?
+                </label>
+            </div>
+            <div class="button">
+                <button type="button" class="btn btn-primary">
+                    Primary</button>
+            </div>
+        </div>
+    </div>
+    </form>
     <!--Jquery-->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <!--CustomScript-->
     <script src="js/printerizerWiz.js"></script>
 </body>
