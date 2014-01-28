@@ -1,0 +1,211 @@
+﻿*
+{
+    /*font-family: "Helvetica Neue",Helvetica,'Source Sans Pro',Arial,sans-serif;*/
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #f8f8f8;
+}
+body, html
+{
+    height: 100%;
+}
+
+.parentdiv .container
+{
+         vertical-align: middle;
+  display:table-cell;
+  position:relative;
+ 
+}
+.parentdiv .container .content
+{
+
+    width:100%;
+  
+
+        
+
+}
+h1
+{
+    font-size: 60px;
+}
+
+
+.light
+{
+    font-weight: 200;
+}
+.lighter
+{
+    font-weight: 300;
+}
+#mainheader
+{
+    background-color: #ed0044;
+    color: white;
+}
+#mainheader h2
+{
+    color: #6e001f;
+}
+.border-bot
+{
+    border-bottom: 3px solid #585858;
+}
+
+.logo
+{
+    font-size: 50px;
+}
+#speed
+{
+    background-color: #f8f8f8;
+}
+#scalable .logo
+{
+    color:#ed0044;
+}
+#speed .logo span
+{
+    color: #cbf800;
+}
+#speed .logo span:first-child
+{
+    color: #eafd97;
+}
+#speed h1
+{
+    color: #5904c4;
+}
+#speed h2
+{
+    color: #b78eeb;
+}
+
+.parentdiv
+{
+    display: table;
+    position: relative;
+    height: 100%;
+    width:100%;
+}
+.parentdiv .container
+{
+    padding-right: 0px;
+padding-left: 0px;
+}
+#scalable
+{
+    background-color: #5904c4;
+    color: #f8f8f8;
+}
+#scalable h2
+{
+    color: #29005b;
+}
+
+#download h2, #download a, #download a:hover
+{
+    color: #ed0044;
+}
+
+#download h1
+{
+    color: #88993b;
+}
+#download
+{
+    background-color: #f8f8f8;
+}
+.next
+{
+    position: absolute;
+text-align: center;
+width: 100%;
+bottom: inherit;
+bottom: 0;
+margin-top: 25%;
+}
+.next a
+{
+    font-size: 60px;
+  
+padding:30px;
+    bottom: 10%;
+    width: 100%;
+
+
+}
+@media (max-width: 1200px)
+{
+    .next a
+    {
+        font-size: 60px;
+    }
+}
+@media (max-width: 992px)
+{
+    .next a
+    {
+        font-size: 50px;
+    }
+}
+@media (max-width: 768px)
+{
+    .next a
+    {
+        font-size: 40px;
+    }
+}
+
+#mainheader .next a
+{
+    color:#6e001f;
+}
+#mainheader .next a:hover
+{
+    color: white;
+}
+#speed .next a
+{
+    color: #5904c4;
+}
+#speed .next a:hover
+{
+    color: #cbf800;
+}
+#scalable .next a
+{
+   color: #29005b;
+}
+#scalable .next a:hover
+{ color:#ed0044;
+       
+}
+
+@media (min-width: 768px)
+{
+    h2
+    {
+        margin: 0 auto;
+        width: 50%;
+        left: 0;
+    }
+}
+
+@media (max-width: 768px)
+{
+    h2
+    {
+        margin: 0 auto;
+        width: 95%;
+        left: 0;
+    }
+
+
+
+

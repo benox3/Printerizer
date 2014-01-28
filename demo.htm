@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <!--Font-->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic'
+        rel='stylesheet' type='text/css'>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Printerizer Demo</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Demo Form</h1>
+        <form id="demoForm" class="form-horizontal" role="form">
+        <hr />
+        <div class="form-group">
+            <label for="inputFirst" class="col-sm-2 control-label">
+                First Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" required id="First" placeholder="First Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputLast" class="col-sm-2 control-label">
+                Last Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" required id="Last" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputLast" class="col-sm-2 control-label">
+                Desired Date</label>
+            <div class="col-sm-2">
+                <input type="date" class="form-control" required id="Text1" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputFeedback" class="col-sm-2 control-label">
+                Feedback</label>
+            <div class="col-sm-10">
+                <textarea minlength="1" required class="form-control" id="myTextArea" rows="3" cols="80"
+                    placeholder="Feedback here"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputSeatType" class="col-sm-2 control-label">
+                Seating</label>
+            <div class="col-sm-2">
+                <select required class="form-control">
+                    <option value="" selected="selected">Select Seating</option>
+                    <option>Mezzanine </option>
+                    <option>Orchestra </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" required for="numTickets">
+                <abbr title="Number">
+                    No.</abbr>
+                of Tickets</label>
+            <div class="col-sm-1">
+                <input type="number" max="10" required class="form-control" id="numTickets" name="numTickets"
+                    value="1">
+                <span class="help-block">*Max 10</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="col-sm-2 control-label">
+                Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" required id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <label class="radio-inline">
+                    <input type="radio" name="optionsRadios" required id="optionsRadios2" value="option1">
+                    I want the tickets emailed to me
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="optionsRadios" required id="Radio1" value="option2">
+                    I would like the tickets mailed to me for a <b>$2.99 fee</b>
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">
+                        I agree to the terms of service
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">
+                    Sign in</button>
+            </div>
+        </div>
+        </form>
+    </div>
+    <!--AutoRefresh Script-->
+    <script src="http://livejs.com/live.js"></script>
+    <!--Jquery-->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!--CustomScript-->
+    <script src="js/printerizer.js"></script>
+</body>
+</html>
