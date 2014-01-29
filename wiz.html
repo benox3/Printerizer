@@ -9,38 +9,80 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <!--Custom CSS-->
     <link rel="stylesheet" href="css/custom.css">
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="css/animate.css">
     <title>Printerizer Wiz</title>
 </head>
 <body>
-    <form>
-    <div class="container" style="width:500px;">
-        <select id="selector" class="form-control">
-            <option value="">Select a form element</option>
-            <option>TextBox</option>
-            <option>CheckBox</option>
-        </select>
-        <div id="createCheckBox">
-            <div class="form-group">
-                <label id="cbDescriptionText">
-                    Label Text</label><input class="form-control" type="text" />
-            </div>
-            <div class="checkbox">
-                <label id="Label1">
-                    <input type="checkbox" />
-                    Should checkbox be checked on default?
-                </label>
-            </div>
-            <div class="button">
-                <button type="button" class="btn btn-primary">
-                    Primary</button>
+    <div class="tophalf parentdiv text-center border-bot">
+        <div class="container">
+            <div class="content">
+                <div id="formcreate" class="absolutize">
+                    <form onsubmit="printerized.createForm()">
+                    <div class="form-group">
+                        <h1>
+                            Printerizer Wizard</h1>
+                        <label for="formTitle">
+                            <h3>
+                                What would you like your form to be called?</h3>
+                        </label>
+                        <input class="form-control" type="text" placeholder="Form Title" id="formTitle" required="required">
+                    </div>
+                    <div class="button">
+                        <button id="createForm" class="btn btn-primary btn-lg btn-block">
+                            Create</button>
+                    </div>
+                    </form>
+                </div>
+                <div id="inputCreatorContainer" class="hidden text-left">
+                    <form id="formInputCreator" action="#">
+                    <label for="inputselector">
+                        Select a form element</label>
+                    <select id="inputselector" class="form-control">
+                        <option value="">Select a form element</option>
+                        <option>TextBox</option>
+                        <option>CheckBox</option>
+                    </select>
+                    <div class="wizCreatorContainer">
+                    </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    </form>
+    <div class="bottomhalf text
+    border-bot">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li><a href="#design" data-toggle="tab">Design View</a></li>
+            <li><a href="#HTML" data-toggle="tab">HTML</a></li>
+        </ul>
+        <!-- Tab
+    panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="design">
+                <div class="container" style="width: 70%">
+                    <form id="wizForm">
+                    <h1 class="lighter" id="formHeader">
+                    </h1>
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane" id="HTML">
+                <div class="container" style="margin:5px;">
+                    <code class="prettyprint lang-html"></code></div>
+            </div>
+            <div class="tab-pane" id="messages">
+                ...</div>
+            <div class="tab-pane" id="settings">
+                ...</div>
+        </div>
+    </div>
     <!--Jquery-->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <!--CustomScript-->
     <script src="js/printerizerWiz.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 </body>
 </html>

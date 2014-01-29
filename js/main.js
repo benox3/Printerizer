@@ -12,5 +12,6 @@ $("document").ready(function () {
         //go to destination
         $('html,body').animate({ scrollTop: dest }, 500, 'swing');
 
+
     });
 });

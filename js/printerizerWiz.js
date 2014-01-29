@@ -6,12 +6,92 @@
     this.cbCount = 0;
     this.tbCount = 0;
     /*end form field counters*/
+    $("#inputselector").change(function () {
+        if ($("#inputselector").prop("selectedIndex") !== 0) {
 
+            printerized.wizCreator($(this).val());
+        }
+
+    });
+    $("form").bind('submit', function () {
+
+        return false;
+    });
+
+    $("#design").html()
+    
 
 }
 
 PrinterizerWiz.prototype = {
 
+
+    createForm: function () {
+
+        $("#formcreate").addClass("hidden");
+
+        $("#inputCreatorContainer").removeClass("hidden");
+        $("#formHeader").text($("#formTitle").val());
+
+
+
+    },
+    wizCreator: function (wizType) {
+        var wizContainer = $(".wizCreatorContainer");
+
+        var wizParent = document.createElement("div");
+        var wizHeader = document.createElement("h2");
+        
+        var wizLabelDiv = document.createElement("div");
+        var wizLabel = document.createElement("label");
+        var wizLabelDescription = document.createTextNode(wizType+" Label Text");
+        var wizInput = document.createElement("input");
+        var wizButtonDiv = document.createElement("div");
+        var wizButton = document.createElement("button");
+        var wizButtontext = document.createTextNode("Create");
+
+        if ($(wizContainer).html().length) {
+
+            $(wizContainer).html("");
+        }
+        wizButton.type = "button";
+        wizInput.type = "text";
+
+        $(wizLabelDiv).addClass("form-group");
+        $(wizInput).addClass("form-control");
+        $(wizButtonDiv).addClass("button");
+        $(wizButton).addClass("btn");
+        $(wizButton).addClass("btn-primary");
+
+
+
+
+        switch (wizType) {
+            case "checkBox":
+
+                break;
+            case "TextBox":
+                $(wizButton).click(function () { printerized.textbox($('.wizCreatorContainer input').val()); printerized.wizCreator($("#inputselector").val()); });
+                break;
+            default:
+
+        }
+
+
+        $(wizContainer).append(wizParent);
+        wizParent.appendChild(wizHeader);
+        
+        wizParent.appendChild(wizLabelDiv);
+        wizLabelDiv.appendChild(wizLabel);
+        wizLabel.appendChild(wizLabelDescription);
+        wizLabelDiv.appendChild(wizInput);
+        wizParent.appendChild(wizButtonDiv);
+        wizButtonDiv.appendChild(wizButton);
+        wizButton.appendChild(wizButtontext);
+
+        $(wizContainer).slideDown();
+
+    },
 
 
     checkbox: function (descriptiontext, checked, optional) {
@@ -38,7 +118,7 @@ PrinterizerWiz.prototype = {
         label.appendChild(checkbox);   // add the box to the element
         label.appendChild(description); // add the description to the element
         console.log(label);
-        $("body").append(inputdiv);
+        $("#wizForm").append(inputdiv);
         this.cbCount++
     },
 
@@ -63,7 +143,7 @@ PrinterizerWiz.prototype = {
         inputdiv.appendChild(textbox);   // add the textbox to the wrapper
         label.appendChild(description); // add the description to the label
         console.log(label);
-        $("body").append(inputdiv);
+        $("#wizForm").append(inputdiv);
         this.tbCount++
     },
 
@@ -79,7 +159,7 @@ PrinterizerWiz.prototype = {
         label.appendChild(checkbox);   // add the box to the element
         label.appendChild(description); // add the description to the element
         console.log(label);
-        $("body").append(label);
+        $("#wizForm").append(label);
         this.checkboxCount++
     }
 
@@ -88,5 +168,4 @@ PrinterizerWiz.prototype = {
 
 
 var printerized = new PrinterizerWiz();
-printerized.checkbox("Text Here");
-printerized.textbox("yay");
+
